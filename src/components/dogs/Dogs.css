@@ -1,0 +1,8 @@
+.dogs {
+    display: flex;
+    background-color: rgb(227, 215, 238);
+}
+
+.ulDogs {
+    flex-grow: 1;
+}
