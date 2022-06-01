@@ -1,0 +1,8 @@
+.body-dogs {
+    width: 90vw;
+    height: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}

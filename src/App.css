@@ -5,6 +5,13 @@ h1 {
     color: beige;
 }
 
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .title-dogs {
     margin: 0;
     padding: 0;

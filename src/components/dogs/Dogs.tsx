@@ -1,14 +1,16 @@
-import Card from "components/Card";
+import Card from "components/card/Card";
 import React from "react";
 import { useEffect, useState } from "react";
 import Api from "../../api/api";
-import "../dogs/Dogs.css"
+
 
 
 
 export default function Dogs() {
     const [dogs, setDogs] = useState<[]>();
     // const [idDogs, setIDogs] = useState(Math.floor((Math.random() * 172) + 0));
+    const[show, setShow]=useState(false);
+    const[showImg, setShowImg]=useState(true);
 
     useEffect(() => {
 
@@ -20,11 +22,20 @@ export default function Dogs() {
         });
 
     }, []);
-    console.log(dogs);
+
+    function aparece(){
+        
+        setShow(current =>!current);  
+
+    }
+
     return (
         <React.Fragment>
             {dogs?.map(dog =>
-                <Card key={dog['id']} image={dog['image']['url']}
+                <Card onClick={aparece}
+                    classDiv = 'aparece-div'
+                    display= {show?'block':'none'}
+                    className="card-dog" key={dog['id']} image={dog['image']['url']}
                     bred_for={dog['bred_fo']} breed_group={dog['breed_group']}
                     height={dog['height']['metric']} life_span={dog['life_span']}
                     name={dog['name']} temperament={dog['temperament']}

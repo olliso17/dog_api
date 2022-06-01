@@ -1,4 +1,4 @@
-import Container from 'components/Container';
+import Container from 'components/container/Container';
 import Dogs from 'components/dogs/Dogs';
 import React from 'react';
 import './App.css';
