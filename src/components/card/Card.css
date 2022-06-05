@@ -6,16 +6,19 @@
     grid-row: 1;
     background-color: #ffc551;
     box-shadow: 0.2vw 0.2vw 0.5vw #c66500;
+    z-index: 2;
 }
 
 .card-dog-description h1 {
     text-align: center;
     background-color: #c66500;
     color: whitesmoke;
+    font-size: 1.5vw;
     margin: 0;
     padding: 0;
 }
 
 .card-dog-description p {
+    font-size: 1vw;
     margin-left: 1vw;
 }

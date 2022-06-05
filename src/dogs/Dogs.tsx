@@ -1,9 +1,12 @@
 import Card from "components/card/Card";
+import Container from "components/container/Container";
 import ImageCard from "components/imageCard/ImageCard";
 import React from "react";
 import { useEffect, useState } from "react";
-import Api from "../../api/api";
-import '../dogs/Dogs.css'
+import Api from "../api/api";
+import './Dogs.css'
+import '../components/container/Container'
+import HoverMover from "components/HoverMove/HoverMover";
 
 
 
@@ -27,15 +30,15 @@ export default function Dogs() {
         <React.Fragment>
 
             {dogs?.map(
-                dog => <div className="card-envolve">
-                    <ImageCard  className={'image-dog'} name={dog['name']} image={dog['image']['url']}></ImageCard>
+                dog => <Container className="card-envolve">
+                    <ImageCard className={'image-dog'} name={dog['name']} image={dog['image']['url']}></ImageCard>
                     <Card className={'card-dog-description'}
                         name={dog['name']}
-                        key={dog['id']} life_span ={dog['life_span']}
-                        temperament={dog['temperament']} bred_for ={dog['bred_for']}
+                        key={dog['id']} life_span={dog['life_span']}
+                        temperament={dog['temperament']} bred_for={dog['bred_for']}
                         breed_group={dog['breed_group']} height={dog['height']['metric']}
-                        weight = {dog['weight']['metric']}></Card>
-                </div>
+                        weight={dog['weight']['metric']}></Card>
+                </Container>
 
 
             )}

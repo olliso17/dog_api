@@ -1,5 +1,5 @@
 import Container from 'components/container/Container';
-import Dogs from 'components/dogs/Dogs';
+import Dogs from './dogs/Dogs';
 import React from 'react';
 import './App.css';
 
