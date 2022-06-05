@@ -1,8 +1,16 @@
 .body-dogs {
-    width: 90vw;
-    height: 90vw;
+    width: 95vw;
+    padding: 2vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    background-color: #ff941a;
+}
+
+.title-dogs {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
 }

@@ -1,36 +1,20 @@
-import "../card/Card.css"
-
-type ApiDogs = {
-    bred_for?: string,
-    breed_group?: string,
-    height?:string
-    id?: number,
-    image?: string
-    life_span?: string,
-    name?: string,
-    temperament?: string,
-    weight?: string,
-    className?:string,
-    display: string,
-    classDiv: string,
-    onClick:React.MouseEventHandler<HTMLButtonElement>
-}
-
+import { ApiDogs } from "components/type/TypeDog";
+import "../card/Card.css";
 
 export default function Card(props: ApiDogs){
  
-    const { bred_for, breed_group, height, id, image, life_span, name, temperament, weight, className, display, classDiv, onClick} = props;
+    const { bred_for, breed_group, height, idCard,name, life_span, temperament, weight, className} = props;
  
-    return <button className={className} key={id} onClick ={onClick}>
-        <img src={image} alt="" />
-            <h2>{name}</h2>
-            <div className={classDiv} key={id} style={{ display }}>
+    return (
+            <div className={className} key={idCard}  >
+                <h1>{name}</h1>
                <p><b>Tempo de vida:</b> {life_span}(anos)</p>
-                <p>Temperamento: {temperament}</p>
-                <p>Criado para: {bred_for}</p>
-                <p>Grupo criado: {breed_group}</p>
-                <p>Altura Métrica: {height}</p>
-                <p>Peso Métrico: {weight}</p> 
-            </div>
-    </button>;
-}
+                <p><b>Temperamento: </b> {temperament}</p>
+                <p><b>Criado para:</b> {bred_for}</p>
+                <p><b>Grupo criado:</b> {breed_group}</p>
+                <p><b>Altura Métrica:</b> {height}</p>
+                <p><b>Peso Métrico:</b> {weight}</p> 
+            </div> 
+    );
+            
+    }

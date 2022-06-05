@@ -1,19 +1,6 @@
-h1 {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: beige;
-}
-
 .App {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.title-dogs {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(47, 12, 80);
 }

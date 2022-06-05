@@ -1,0 +1,9 @@
+.card-envolve {
+    display: grid;
+    grid-template-columns: 30vw;
+    grid-template-rows: 40vh;
+    margin-bottom: 1vw;
+    width: 30vw;
+    height: 40vh;
+    border-radius: 1vw;
+}

@@ -1,0 +1,32 @@
+.image-dog {
+    width: 30vw;
+    height: 40vh;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 1;
+    border-style: solid;
+    border-radius: 0.5vw;
+    border-color: black;
+    box-shadow: 0.2vw 0.2vw 0.5vw #c66500;
+}
+
+@keyframes rodar {
+    0% {
+        width: 30vw;
+        box-shadow: 10vw 0vw 2vw #c66500;
+    }
+    50% {
+        width: 10vw;
+    }
+    100% {
+        width: 0;
+        display: block;
+    }
+}
+
+.image-dog:active {
+    animation-name: rodar;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
